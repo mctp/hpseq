@@ -36,7 +36,7 @@ deps: htslib klib grep
 
 htslib:
 	git clone "https://github.com/samtools/htslib.git"
-	cd htslib && $(MAKE)
+	cd htslib && git submodule update --init --recursive && $(MAKE)
 
 klib:
 	git clone "https://github.com/attractivechaos/klib.git"
